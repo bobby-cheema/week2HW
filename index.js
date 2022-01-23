@@ -1,9 +1,10 @@
 const headerEL = document.getElementById("navigation");
 const footerEL = document.getElementById("footer");
-const weatherappEL = document.getElementById("weatherapp");
-const calandarappEL = document.getElementById("calandarapp");
-const quizEL = document.getElementById("quiz");
+
 const resumeEL = document.getElementById("circleResume");
+const projectEL = document.getElementById("circleProjects");
+const contactEL = document.getElementById("circleContact");
+
 const navigation = `
 <section>
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -24,7 +25,7 @@ const navigation = `
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mb-2 me-auto mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="./resume.html"
+                <a class="nav-link" aria-current="page" href="./resume.html"
                   >Resume |</a
                 >
               </li>
@@ -83,18 +84,13 @@ const footer = `
 `;
 footerEL.innerHTML = footer;
 headerEL.innerHTML = navigation;
-weatherappEL.addEventListener("click", (event) => {
-  open("https://bobby-cheema.github.io/weather/", "_blank");
-});
-
-calandarappEL.addEventListener("click", () => {
-  open("https://bobby-cheema.github.io/calandar/", "_blank");
-});
-
-quizEL.addEventListener("click", () => {
-  open("https://bobby-cheema.github.io/jsquiz/", "_blank");
-});
 
 resumeEL.addEventListener("click", () => {
   open("./resume.html");
+});
+projectEL.addEventListener("click", () => {
+  open("./projects.html");
+});
+contactEL.addEventListener("click", () => {
+  open("./contact.html");
 });
